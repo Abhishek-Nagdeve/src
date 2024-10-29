@@ -9,7 +9,7 @@ from phonenumber_field.serializerfields import PhoneNumberField
 
 User = get_user_model()
 
-class UserSerializer(serializers.Serializer):
+class UserSerializer(serializers.ModelSerializer):
     gender = serializers.CharField(source="profile.gender")
     phone_number = PhoneNumberField(source="profile.phone_number")
     profile_photo = serializers.ImageField(source="profile.profile_photo.url")

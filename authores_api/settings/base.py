@@ -159,7 +159,7 @@ CORS_URLS_REGEX = r"^api/.*$"
 AUTH_USER_MODEL = "users.User"
 
 CELERY_BROKER_URL=env("CELERY_BROKER")
-CELERY_RESULT_BACKENT=CELERY_BROKER_URL
+CELERY_RESULT_BACKEND=CELERY_BROKER_URL
 CELERY_ACCEPT_CONTENT=["json"]
 CELERY_TASK_SERIALIZER="json"
 CELERY_RESULT_SERIALIZER="json"
@@ -201,7 +201,6 @@ REST_AUTH = {
 AUTHENTICATION_BACKEND = [
     "allauth.account.auth_backends.AuthenticationBackend",
     "django.contrib.auth.backends.ModelBAckend",
-
 ]
 
 ACCOUNT_AUTHENTICATION_METHOD = "email"
